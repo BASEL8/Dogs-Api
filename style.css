@@ -140,6 +140,14 @@ a.btn .logo {
 }
 
 @media only screen and (max-width: 600px) {
+   body {
+      padding: 2px;
+   }
+
+   #root {
+      padding: 2px;
+   }
+
    #list li {
       min-width: 135px;
    }
