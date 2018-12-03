@@ -1,0 +1,184 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 10px;
+   background: black;
+}
+
+h1 {
+   color: white;
+   text-align: left;
+   width: 100%;
+   padding-left: 20px;
+}
+
+#root {
+   width: 100%;
+   height: 100%;
+   padding: 10px;
+   flex-grow: 1;
+   display: flex;
+   max-height: 850px;
+}
+
+#list {
+   padding: 10px;
+   overflow: scroll;
+   flex-shrink: 0;
+}
+
+#list ul {
+   list-style: none;
+   width: 100%;
+}
+
+#list li {
+   padding: 15px 15px 15px 5px;
+   text-align: left;
+   border-bottom: 1px solid white;
+   position: relative;
+   min-width: 200px;
+}
+
+.btn {
+   border: 2px solid #016DF1;
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto 20px auto;
+}
+
+a.btn .logo {
+   width: 45px;
+}
+
+#list li:hover {
+   background: red;
+}
+
+#list li a {
+   text-align: left;
+   text-decoration: none;
+   color: white;
+   font-size: 20px;
+   font-weight: 100;
+   text-transform: capitalize;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 5px;
+}
+
+#view {
+   padding: 10px;
+   background: black;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   width: calc(100% - 200px);
+}
+
+#mainViewer {
+   padding: 10px;
+   flex-grow: 5;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+#mainViewer img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+#imageList {
+   margin: 10px 0 0 0;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   overflow-x: scroll;
+}
+
+#imageList .thumbnail {
+   height: 150px;
+   width: 150px;
+   flex: 1 0 150px;
+   margin-left: 5px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+#imageList .thumbnail img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+#name {
+   padding: 10px;
+   color: white;
+   text-align: center;
+   font-size: 25px;
+   font-weight: 900;
+   letter-spacing: 2.2px;
+   text-transform: capitalize;
+}
+
+@media only screen and (max-width: 600px) {
+   #list li {
+      min-width: 135px;
+   }
+
+   #list li a {
+      font-size: 13px;
+   }
+
+   #view {
+      width: calc(100% - 150px)
+   }
+
+   #imageList .thumbnail {
+      height: 75px;
+      flex: 1 0 75px;
+   }
+}
+
+@media only screen and (max-width: 400px) {
+   h1 {
+      text-align: center;
+      padding-left: 0;
+   }
+
+   #root {
+      flex-direction: column;
+   }
+
+   #list {
+      display: flex;
+      flex-direction: column;
+   }
+
+   #list ul {
+      display: flex;
+      overflow-x: scroll;
+   }
+
+   #view {
+      width: 100%;
+   }
+}
