@@ -1,42 +1,8 @@
-//DOG api
-/*
-a - In this lab you're gonna build a single-page application (SPA)
-b - There should only exist a single html file
-c - You're gonna build an application for viewing images of dogs
-d - Dog API  = https://dog.ceo/dog-api/documentation/
-e - On the front page of the application
-      1 - a table or list of some kind should list all the different breeds of dogs that can be viewed
-          List all breeds API =  https://dog.ceo/api/breeds/list/all
-      2 - Each breed should link to a new "page" 
-      3 - list multiple images of dogs using the "by breed" endpoint (see documentation for information)
-      4 - Each new page should have a proper navigation route, meaning after entering a breed page, a refresh of the site should navigate you to the same place (Tips is to use the hash "#" property of window.location)
-      5 - Each breed site should have a list of all sub-breeds that exists (if any) for the breed
-          a - These should work similary to the breeds,
-          b - linking to a seperate sub-breed site where both a list of images should be shown
-      6 - Each breed and sub-breed site should also render the name of the breed we're looking at
-      7 - On each site (index, breed, sub-breed), there should also exists a random image (see "Random image" in the documentation)
-      8 - and a button that refreshes this random image. When under breed or sub-breed site, 
-          the random image should be of the breed or sub-breed.
-
- //adds
-   npm :
-        1 - https://beta.observablehq.com/@spencermountain/wtf_wikipedia
-   wiki dog info
-      origin
-      age of the dog
-      size
-      color
-
-
-      api img : 
-      api all https://dog.ceo/api/breeds/list/all
-*/
 let model = {
    currentDog: null,
    currentDogImages: null,
    dogsList: []
 };
-
 fetch('https://dog.ceo/api/breeds/list/all')
    .then(response => response.json())
    .then(data => {
@@ -124,6 +90,3 @@ fetch('https://dog.ceo/api/breeds/list/all')
          })
          .catch(err => console.log(err))
    })
-
-
-console.log()
